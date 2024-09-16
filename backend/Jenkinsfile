@@ -66,6 +66,7 @@ pipeline {
         stage('Prune old images') {
             steps {
                 script {
+//                 --force : 잰킨스에서 도커명령을 사용할 때 권한 문제로 아래 명령어가 실행 안됨을 막아줌
                     sh "docker system prune --filter until=1h --force"
                 }
             }
