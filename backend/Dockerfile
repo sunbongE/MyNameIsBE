@@ -18,5 +18,5 @@ WORKDIR /back
 COPY --from=builder /back/build/libs/*.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
 VOLUME /tmp
-
+ENV TZ Asia/Seoul
 EXPOSE 8081
